@@ -1,8 +1,16 @@
 <?php
 
-use App\Http\Controllers\MovimientoController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MovimientoController;
 
-Route::get('/', [MovimientoController::class, 'index']);
+Route::get('/', function(){
+    return redirect()->route('login');
+});
 
-Route::post('/movimiento', [MovimientoController::class, 'store'])->name('movimiento.guardar');
+Route::middleware(['auth'])->group(function(){
+    Route::get('/bodega', [MovimientoController::class, 'index'])->name('dashboard');
+    Route::post('/movimientos', [MovimientoController::class, 'store'])->name('movimiento.guardar');
+});
+
+require __DIR__.'/auth.php';
