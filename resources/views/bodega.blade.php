@@ -20,6 +20,18 @@
             <p class="text-slate-500 mt-1">Gestiona el inventario de productos en tiempo real.</p>
         </div>
 
+        <div class="flex justify-between items-center mb-6 bg-slate-50 p-3 rounded border border-slate-200">
+            <div class="text-sm text-slate-600">
+                Hola, <b>{{Auth::user()->name}}</b>
+            </div>
+            <form method="POST" action="{{route('logout')}}">
+                @csrf
+                <button type="submit" class="text-sm bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg shadow transition transform active:scale-95">
+                    Cerrar Sesión
+                </button>
+            </form>
+        </div>
+
         @if(session('success'))
             <div class="bg-green-50 border-l-4 border-green-500 text-green-700 p-4 mb-6 rounded shadow-sm" role="alert">
                 <p class="font-bold">¡Operación exitosa!</p>
