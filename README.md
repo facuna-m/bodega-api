@@ -51,12 +51,12 @@ php artisan key:generate
 3. Abre el archivo .env que creaste en el paso 3 y configura tus credenciales:
 
 ```ini
-DB_CONNECTION=postgresql
+DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
-DB_PORT=3306
+DB_PORT=5432
 DB_DATABASE=bodega_manager
-DB_USERNAME=root
-DB_PASSWORD=tu_password
+DB_USERNAME=postgres
+DB_PASSWORD='tu password de postgresql'
 ```
 4. Restaura el backup (bd_dump_bodega-api) que se encuentra en la carpeta 'postgresql' en la base de datos vacía creada anteriormente.
 
