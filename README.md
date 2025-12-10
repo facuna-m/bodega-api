@@ -8,7 +8,7 @@ Asegúrate de tener instalado en tu computador:
 * [PHP](https://www.php.net/) (versión 8.1 o superior)
 * [Composer](https://getcomposer.org/)
 * [Node.js & NPM](https://nodejs.org/)
-* Un gestor de base de datos (MySQL, MariaDB, etc.)
+* [PostgreSQL](https://www.postgresql.org/)
 
 ---
 
