@@ -148,9 +148,21 @@
                         </tbody>
                     </table>
                 </div>
+
+                <div class='w-fit mx-auto mt-6 bg-slate-50 p-3 rounded border border-slate-200'>
+                    <form method="POST" action="{{route('bodega.reporte')}}">
+                        @csrf
+                        <button type="submit" class="text-sm bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg shadow transition transform active:scale-95">
+                            📥 Descargar Reporte de Stock
+                        </button>
+
+                    </form>
+ 
             </div>
 
         </div>
+
+        
     </div>
 </body>
 </html>
