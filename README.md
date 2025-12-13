@@ -9,6 +9,7 @@ Asegúrate de tener instalado en tu computador:
 * [Composer](https://getcomposer.org/)
 * [Node.js & NPM](https://nodejs.org/)
 * [PostgreSQL](https://www.postgresql.org/)
+* [XAMPP](https://www.apachefriends.org/es/index.html)
 
 ---
 
@@ -69,7 +70,7 @@ npm run build
 ```
 
 ### 7. Iniciar el servidor
-
+Antes de iniciar el servidor, abre XAMPP y ejecuta Apache.
 ```bash
 php artisan serve
 ```
