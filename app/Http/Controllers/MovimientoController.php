@@ -41,4 +41,20 @@ class MovimientoController extends Controller
         $productos = Producto::all();
         return view('bodega', compact('productos'));
     }
+
+    public function getReport(){
+        $productos = Producto::all();
+
+        $filename = "reporte_stock.txt";
+        $handle = fopen($filename, 'w+');
+        fputcsv($handle, ['ID', 'Nombre', 'Descripción', 'Stock']);
+
+        foreach($productos as $producto){
+            fputcsv($handle, [$producto->id, $producto->nombre, $producto->descripcion, $producto->stock]);
+        }
+
+        fclose($handle);
+
+        return response()->download($filename)->deleteFileAfterSend(true);
+    }
 }
